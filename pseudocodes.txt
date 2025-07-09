@@ -1,0 +1,71 @@
+Pseudocode
+----------
+
+1. Initialize the game:
+    - ask for player's name
+    - show difficulty options: easy, hard, god mode
+    - set default values:
+        - selectedDifficulty
+        - selectedWeapon
+        - resultMessage: 
+        ----
+        easy
+        ----
+            a. if before appearance ('Too early')
+            b. if after appearance & missed ('The ka-tsoa got you!')
+            c. on hit ('Ka-tsoa eliminated!' or 'ATOH!')
+        ----
+        hard
+        ----
+            a. end of timeRange ('You elimiated (amount) ka-tsoa today!')
+
+        - score = 0 (hard)
+
+2. Define constants:
+    - weaponOptions = ["slippers", "newspapers", "bug spray"] - preferably 2 options
+        targetRange: {large, medium, small}
+    - difficultySettings =
+        easy: { delayRange: 1000–3000ms, holes: 1 }
+        hard: { delayRange: 0–60000ms, holes: 3 }
+        god: { delayRange: 0ms, stayOnPage: true } or { autoWhack: true } - for demo or tutorial
+
+3. When player clicks "Start Game" or "May the odds be in your Favour":
+    - Show selected difficulty and weapon
+    - Hide cockroach at start
+    - Display “Get Ready…” or "Hold Your Breath.." message
+    - Start randomTimer (based on difficulty)
+    - After timer ends, show cockroach randomly from one of the holes
+
+4. Handle player’s whack attempt:
+    -----
+    easy
+    -----
+    - If cockroach has NOT appeared yet:
+        - Show “Too early!” message
+        - Reset game
+    - If cockroach has appeared:
+        - Calculate reaction time
+        - Show "Ka-tsoa eliminated" or “ATOH!” message with time
+        - Save score if it's higher than current highscore
+    -----
+    hard
+    -----
+    - If hit when cockroach has NOT appeared yet:
+        - Negative score
+    - If hit AFTER first appearance:
+        - Add score per hit
+        - Subtract score when missed
+        - Save score if it's higher than current highscore
+        - Show leaderboard highscore
+    - Play again button when countDown = 0
+
+6. Handle God Mode:
+    - Allow cockroach to stay no page for hitting anytime
+    or
+    - Auto-whack after short delay to demo winning state
+
+7. On “Reset” button click:
+    - Clear all messages
+    - Reset variables to initial state
+    - Hide cockroach
+    - Reset timer and current score
