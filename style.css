@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-placeholder {
+  width: 80rem;
+  height: 46rem;
+  background-image: url("./assets/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 8px;
+  margin: 20px;
+}
+
+#modeTitle {
+  display: flex;
+  justify-content: center;
+}
+
+#difficultyMode {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
