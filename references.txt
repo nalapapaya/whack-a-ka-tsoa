@@ -23,3 +23,12 @@ https://favpng.com/png_view/clipart-cute-cartoon-cockroach-illustration-png/HENG
 
 baby cockroach clipart
 https://www.redbubble.com/i/poster/Baby-Cockroach-by-Puppies/164436221.LVTDI
+
+border radius reference
+https://www.w3schools.com/cssref/css3_pr_border-top-right-radius.php#:~:text=CSS%20Syntax,corner%20is%20square%2C%20not%20rounded.
+
+gradient background reference
+https://www.w3schools.com/css/css3_gradients.asp
+
+image rotating reference
+https://cloudinary.com/guides/image-effects/rotating-an-image-with-css#:~:text=The%20transform%20property,-The%20trick%20to&text=The%20rotate%20function%20accepts%20an,negative%20values%20rotate%20it%20anticlockwise.

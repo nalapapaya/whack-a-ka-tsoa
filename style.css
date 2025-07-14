@@ -7,6 +7,13 @@ body {
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 20px;
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -15,14 +22,80 @@ body {
 }
 
 .img-placeholder {
-  width: 80rem;
-  height: 46rem;
+  width: 60rem;
+  height: 36rem;
   background-image: url("./assets/background.png");
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: bottom;
-  border-radius: 8px;
-  margin: 20px;
+  border-radius: 20px;
+  margin: 5px;
+  border: rgba(255, 255, 255, 0.9) 8px solid
+}
+
+.gamePlay {
+  display: flex;
+  justify-content: center;
+}
+
+.easyBox {
+  width: 130px;
+  height: 65px;
+  border: 2px solid #281b0d;
+  padding: 10px;
+  margin: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-image: linear-gradient(#332211,#281b0d);
+  transform: rotate(-62deg);
+  position: absolute;
+  bottom: 18rem;
+  left: 27.3rem;
+  visibility: hidden; /* hidden until chosen */
+}
+
+.hardBox1 {
+  width: 130px;
+  height: 65px;
+  border: 2px solid #281b0d;
+  padding: 10px;
+  margin: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-image: linear-gradient(#332211,#281b0d);
+  position: absolute;
+  top: 17.4rem;
+  left: 40rem;
+  visibility: hidden; /* hidden until chosen */
+}
+
+.hardBox2 {
+  width: 130px;
+  height: 65px;
+  border: 2px solid #281b0d;
+  padding: 10px;
+  margin: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-image: linear-gradient(#332211,#281b0d);
+  position: absolute;
+  top: 17.4rem;
+  left: 52.5rem;
+  visibility: hidden; /* hidden until chosen */
+}
+
+.hardBox3 {
+  width: 130px;
+  height: 65px;
+  border: 2px solid #281b0d;
+  padding: 10px;
+  margin: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background-image: linear-gradient(#332211,#281b0d);
+  position: absolute;
+  top: 17.4rem;
+  left: 65rem;
+  visibility: hidden; /* hidden until chosen */
 }
 
 #modeTitle {
@@ -34,6 +107,8 @@ body {
   display: flex;
   justify-content: center;
   gap: 2rem;
+  font-size: 15px;
+
 }
 
 #logo {
