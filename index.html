@@ -13,34 +13,48 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container"> 
-      <!-- or wrapper -->
+    <div class="container">
       <div class="row">
         <h1 class="col-sm-12" id="gameTitle">
           <div class="img" id="logo"></div>
           Whack-a-Ka-Tsoa!
         </h1>
       </div>
-      <div class="intructions">
-        <!-- as a popup window -->
-        <h2 class="col-sm-12">Click on weapon or press space bar to hit!</space></h2>
-      </div>
+      <div class="col-sm-12 border" id="timer">&nbsp;</div>
     </div>
   <!-- have to add start game message here & replace mode with timer & score -->
-    <h3 class="col-sm-12" id="modeTitle">Choose your mode:</h3>
-    <div class="col-sm-12" id="difficultyMode">
-      <button class="button" id="easy">Easy</button>
-      <button class="button" id="hard">Hard</button>
-      <button class="button" id="god">God</button>
-      <button class="button" id="startGame">Start Game</button>
-    </div>
-
-  <!-- have to add start game button, clickable arrow buttons, weapon & target  -->
-  <!-- results message & reset game button -->
     <div class="gamePlay">
+      <div class="popup gameRules" id="popup1">
+        <h2>Click on weapon or press space bar to hit!</h2>
+        <button class="button" id="next">Next</button>
+      </div>
+      <div class="popup selectDifficulty" id='popup2'>
+        <!-- choose mode -->
+        <h3 class="col-sm-12" id="modeTitle">Choose your mode:</h3>
+        <button class="button" id="easy">Easy</button>
+        <button class="button" id="hard">Hard</button>
+        <button class="button" id="god">God</button>
+      </div>
+      <div class="popup selectWeapon" id="popup3">
+        <!-- choose weapon -->
+        <p>Select your weapon:</p>
+        <button class="weapon button" id="newspaper">Newspaper</button>
+        <button class="weapon button" id="slippers">Slippers</button>
+      </div>
+      <div class="popup startGame" id="popup4">
+        <!-- start game -->
+        <button class="button popupclose" id="startGame">Start Game</button>
+      </div>
+      <div class="popup resultsBoard" id="popup5">
+        <!-- results & reset -->
+        <span id="resultMessage">results message</span>
+        <button class="button popupclose" id="resetGame">Restart</button>
+      </div>
       <div class="img-placeholder col-md-6">
+        <!-- easy mode -->
         <div class="easyBox"></div>
         <div class="img" id="easyRoach"></div>
+        <!-- hard mode -->
         <div class="hardBox1"></div>
         <div class="hardBox2"></div>
         <div class="hardBox3"></div>
@@ -48,7 +62,7 @@
         <div class="img" id="hardRoach2"></div>
         <div class="img" id="hardRoach3"></div>
       </div>
-      
     </div>
   </body>
+  <script src="script.js"></script>
 </html>

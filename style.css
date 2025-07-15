@@ -3,23 +3,47 @@
 }
 
 @keyframes easyRoachAni {
-  0% {left: 27.5rem; bottom: 18rem;}
-  100% {left: 67rem; bottom: 3rem;}
+  0% {
+    left: 27.5rem;
+    bottom: 18rem;
+  }
+  100% {
+    left: 67rem;
+    bottom: 3rem;
+  }
 }
 
 @keyframes hardRoach1Ani {
-   0% {left: 40rem; top: 16rem;}
-  100% {left: 40rem; top: 40rem;}
+  0% {
+    left: 40rem;
+    top: 16rem;
+  }
+  100% {
+    left: 40rem;
+    top: 40rem;
+  }
 }
 
 @keyframes hardRoach2Ani {
-   0% {left: 52.5rem; top: 16rem;}
-  100% {left: 52.5rem; top: 40rem;}
+  0% {
+    left: 52.5rem;
+    top: 16rem;
+  }
+  100% {
+    left: 52.5rem;
+    top: 40rem;
+  }
 }
 
 @keyframes hardRoach3Ani {
-   0% {left: 65rem; top: 16rem;}
-  100% {left: 65rem; top: 40rem;}
+  0% {
+    left: 65rem;
+    top: 16rem;
+  }
+  100% {
+    left: 65rem;
+    top: 40rem;
+  }
 }
 
 body {
@@ -47,7 +71,7 @@ h3 {
   padding: 0 15px;
   cursor: pointer;
   box-shadow: 0 5px #999;
-  margin: 2px
+  margin: 2px;
 }
 
 .img-placeholder {
@@ -58,12 +82,27 @@ h3 {
   background-position: bottom;
   border-radius: 20px;
   margin: 5px;
-  border: rgba(255, 255, 255, 0.9) 8px solid
+  border: rgba(255, 255, 255, 0.9) 8px solid;
+  position: relative;
+  z-index: 1;
 }
 
 .gamePlay {
   display: flex;
   justify-content: center;
+}
+
+.blur {
+  filter: blur(2px);
+}
+
+.popup {
+  position: fixed;
+  z-index: 99;
+  background: white;
+  display: none;
+  width: 200px;
+  height: 150px;
 }
 
 .easyBox {
@@ -74,7 +113,7 @@ h3 {
   margin: 10px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  background-image: linear-gradient(#332211,#281b0d);
+  background-image: linear-gradient(#332211, #281b0d);
   transform: rotate(-62deg);
   position: absolute;
   bottom: 18rem;
@@ -90,7 +129,7 @@ h3 {
   margin: 10px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  background-image: linear-gradient(#332211,#281b0d);
+  background-image: linear-gradient(#332211, #281b0d);
   position: absolute;
   top: 17.4rem;
   left: 40rem;
@@ -105,7 +144,7 @@ h3 {
   margin: 10px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  background-image: linear-gradient(#332211,#281b0d);
+  background-image: linear-gradient(#332211, #281b0d);
   position: absolute;
   top: 17.4rem;
   left: 52.5rem;
@@ -120,7 +159,7 @@ h3 {
   margin: 10px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
-  background-image: linear-gradient(#332211,#281b0d);
+  background-image: linear-gradient(#332211, #281b0d);
   position: absolute;
   top: 17.4rem;
   left: 65rem;
@@ -138,7 +177,6 @@ h3 {
   /* visibility: hidden; */
   animation-name: easyRoachAni;
   animation-duration: 0.35s;
-  
 }
 
 #hardRoach1 {
@@ -186,9 +224,7 @@ h3 {
   margin: 2px;
 }
 
-#difficultyMode {
-  display: flex;
-  justify-content: center;
+#selectDifficulty {
   gap: 2rem;
   font-size: 15px;
 }
@@ -203,13 +239,13 @@ h3 {
 }
 
 #easy {
-  background-color: #ADD8E6;
+  background-color: #add8e6;
 }
 
 #hard {
-  background-color: #FFB6C1;
+  background-color: #ffb6c1;
 }
 
 #god {
-  background-color: #FDFD96;
+  background-color: #fdfd96;
 }

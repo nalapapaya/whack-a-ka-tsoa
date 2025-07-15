@@ -1,43 +1,54 @@
 /*-------------------------------- Constants --------------------------------*/
+const totalPopups = 4; //excludes results popup
 
 /*---------------------------- Variables (state) ----------------------------*/
-let score = 0;
-let highscore = 0;
+let currentPopup = 1;
 
 /*------------------------ Cached Element References ------------------------*/
-const modeSelected = document.querySelectorAll(".button");
-const startGame = document.querySelector("#startGame");
-const allBoxes = document.querySelector("box");
-const messageEl = document.querySelector('#message');
-const hardRoach = document.querySelector('#easyRoach');
+const imageWrapper = document.querySelector(".img-placeholder");
+const popupEls = document.querySelectorAll(".popup");
+const allButtons = document.querySelectorAll(".button");
+const closeButtons = document.querySelectorAll(".popupclose");
 
-console.log(modeSelected);
-console.log(startGame);
-console.log(allBoxes);
 /*-------------------------------- Functions --------------------------------*/
-const render = () => {
-  //start randomTimer (for cockroach appearance)
-  //start countUp when hit
-  console.log(render)
-};
-
-
-const init = () => { // when game is reset
-  console.log("Initialised!");
-  messageEl.textContent = ""; //clear message
-  score = 0; //clear current score
-  render();
-};
-
+//Showing popups by steps
+function showPopup(step) {
+  popupEls.forEach((p) => (p.style.display = "none")); //to hide all popups first
+  const target = document.querySelector(`#popup${step}`);
+  if (target) {
+    //if step exists
+    target.style.display = "block"; //make visible
+    imageWrapper.classList.add("blur"); //style container blur
+  }
+}
+//Hide popups and remove blur
+function hideAllPopups() {
+  popupEls.forEach((p) => (p.style.display = "none")); //hide all popups
+  imageWrapper.classList.remove("blur");
+}
 /*----------------------------- Event Listeners -----------------------------*/
-//Showibg all boxes when game starts
-const show = (el) => {
-  el.hidden = false;
-};
-startGame.onclick = show(allBoxes);
+//show 1st popup on page
+window.addEventListener("load", () => {
+  showPopup(currentPopup);
+});
 
-//showing msg boxes
+//step +1 for popup
+allButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    if (currentPopup < totalPopups) {
+      currentPopup++;
+      showPopup(currentPopup);
+    } 
+    // else if (currentPopup === totalPopups) {
+    //   showPopup(currentPopup);
+    // }
+    console.log("current popup:", currentPopup);
+  });
+});
 
-//creating cockroach element
-
-//showing instruction boxes
+closeButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    popupEls.forEach((p) => (p.style.display = "none"));
+    imageWrapper.classList.remove("blur");
+  })
+})
