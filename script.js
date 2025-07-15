@@ -61,8 +61,13 @@ function startGame() {
 
   if (selectedMode === "hard") {
     countdown(); //start timer
-  } else {
-    document.querySelector("#timer").innerText = "Timer: ∞";
+    document.querySelector(".hardBox").style.display = "block";
+  } else if (selectedMode === "easy") {
+    document.querySelector("#timer").innerText = "Timer: \u221E";
+    document.querySelector(".easyBox").style.display = "block";
+  } else if (selectedMode === "god") {
+    document.querySelector("#timer").innerText = "Timer: \u221E";
+    document.querySelector(".easyBox").style.display = "block";
   }
 
   //spawnRoaches()
@@ -72,6 +77,10 @@ function startGame() {
 function restartGame() {
   document.querySelector("#scoreDisplay").innerHTML = `&nbsp;`;
   document.querySelector("#timer").innerHTML = `&nbsp;`;
+  document.querySelector(".easyBox").style.display = "none";
+  document.querySelector(".hardBox").style.display = "none";
+  document.querySelector("#easyRoach").style.display = "none";
+  document.querySelector("#hardRoach").style.display = "none";
   score = 0;
   currentPopup = 3;
   showPopup(currentPopup);
@@ -81,9 +90,15 @@ function restartGame() {
 function startOver() {
   document.querySelector("#scoreDisplay").innerHTML = `&nbsp;`;
   document.querySelector("#timer").innerHTML = `&nbsp;`;
+  document.querySelector("#nameDisplay").innerHTML = `&nbsp;`;
+  document.querySelector(".easyBox").style.display = "none";
+  document.querySelector(".hardBox").style.display = "none";
+  document.querySelector("#easyRoach").style.display = "none";
+  document.querySelector("#hardRoach").style.display = "none";
   score = 0;
   currentPopup = 1;
   showPopup(currentPopup);
+  document.querySelector("#playerInput").value = ""; // to clear fill
 }
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -117,8 +132,13 @@ closeButtons.forEach((button) => {
 //for player name input
 next.addEventListener("click", () => {
   const inputName = document.querySelector("#playerInput").value;
-  document.querySelector("#nameDisplay").innerText =
-    `Player:  ${inputName}` || `Player: Guest`;
+  let playerText;
+  if (inputName !== "") {
+    playerText = `Player:  ${inputName}`;
+  } else {
+    playerText = `Player: Guest`;
+  }
+  document.querySelector("#nameDisplay").innerText = playerText;
 });
 
 //player selects mode
