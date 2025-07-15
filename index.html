@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container"> 
+      <!-- or wrapper -->
       <div class="row">
         <h1 class="col-sm-12" id="gameTitle">
           <div class="img" id="logo"></div>
@@ -21,17 +22,21 @@
         </h1>
       </div>
       <div class="intructions">
-        <h2 class="col-sm-12">Instructions here</h2>
+        <!-- as a popup window -->
+        <h2 class="col-sm-12">Click on weapon or press space bar to hit!</space></h2>
       </div>
     </div>
-
+  <!-- have to add start game message here & replace mode with timer & score -->
     <h3 class="col-sm-12" id="modeTitle">Choose your mode:</h3>
     <div class="col-sm-12" id="difficultyMode">
-      <button id="easy">Easy</button>
-      <button id="hard">Hard</button>
-      <button id="god">God</button>
+      <button class="button" id="easy">Easy</button>
+      <button class="button" id="hard">Hard</button>
+      <button class="button" id="god">God</button>
+      <button class="button" id="startGame">Start Game</button>
     </div>
 
+  <!-- have to add start game button, clickable arrow buttons, weapon & target  -->
+  <!-- results message & reset game button -->
     <div class="gamePlay">
       <div class="img-placeholder col-md-6">
         <div class="easyBox"></div>

@@ -2,6 +2,26 @@
   box-sizing: border-box;
 }
 
+@keyframes easyRoachAni {
+  0% {left: 27.5rem; bottom: 18rem;}
+  100% {left: 67rem; bottom: 3rem;}
+}
+
+@keyframes hardRoach1Ani {
+   0% {left: 40rem; top: 16rem;}
+  100% {left: 40rem; top: 40rem;}
+}
+
+@keyframes hardRoach2Ani {
+   0% {left: 52.5rem; top: 16rem;}
+  100% {left: 52.5rem; top: 40rem;}
+}
+
+@keyframes hardRoach3Ani {
+   0% {left: 65rem; top: 16rem;}
+  100% {left: 65rem; top: 40rem;}
+}
+
 body {
   margin: 0;
   background-color: rgba(0, 0, 0, 0.2);
@@ -14,11 +34,20 @@ h2 {
 h3 {
   font-size: 20px;
 }
+
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+/* difficulty buttons */
+.button {
+  border-radius: 12px;
+  padding: 0 15px;
+  cursor: pointer;
+  box-shadow: 0 5px #999;
+  margin: 2px
 }
 
 .img-placeholder {
@@ -50,7 +79,7 @@ h3 {
   position: absolute;
   bottom: 18rem;
   left: 27.3rem;
-  /* visibility: hidden; hidden until chosen */
+  /* visibility: hidden; */
 }
 
 .hardBox1 {
@@ -65,7 +94,7 @@ h3 {
   position: absolute;
   top: 17.4rem;
   left: 40rem;
-  /* visibility: hidden; hidden until chosen */
+  /* visibility: hidden; */
 }
 
 .hardBox2 {
@@ -80,7 +109,7 @@ h3 {
   position: absolute;
   top: 17.4rem;
   left: 52.5rem;
-  /* visibility: hidden; hidden until chosen */
+  /* visibility: hidden;  */
 }
 
 .hardBox3 {
@@ -95,7 +124,7 @@ h3 {
   position: absolute;
   top: 17.4rem;
   left: 65rem;
-  /* visibility: hidden; hidden until chosen */
+  /* visibility: hidden; */
 }
 
 #easyRoach {
@@ -106,6 +135,10 @@ h3 {
   position: absolute;
   bottom: 18rem;
   left: 27.5rem;
+  /* visibility: hidden; */
+  animation-name: easyRoachAni;
+  animation-duration: 0.35s;
+  
 }
 
 #hardRoach1 {
@@ -116,6 +149,9 @@ h3 {
   position: absolute;
   top: 16rem;
   left: 40rem;
+  /* visibility: hidden; */
+  animation-name: hardRoach1Ani;
+  animation-duration: 2s;
 }
 
 #hardRoach2 {
@@ -126,6 +162,9 @@ h3 {
   position: absolute;
   top: 16rem;
   left: 52.5rem;
+  /* visibility: hidden; */
+  animation-name: hardRoach2Ani;
+  animation-duration: 2s;
 }
 
 #hardRoach3 {
@@ -136,11 +175,15 @@ h3 {
   position: absolute;
   top: 16rem;
   left: 65rem;
+  /* visibility: hidden; */
+  animation-name: hardRoach3Ani;
+  animation-duration: 2s;
 }
 
 #modeTitle {
   display: flex;
   justify-content: center;
+  margin: 2px;
 }
 
 #difficultyMode {
@@ -148,7 +191,6 @@ h3 {
   justify-content: center;
   gap: 2rem;
   font-size: 15px;
-
 }
 
 #logo {
@@ -158,4 +200,16 @@ h3 {
   background-size: cover;
   display: inline-block;
   vertical-align: middle;
+}
+
+#easy {
+  background-color: #ADD8E6;
+}
+
+#hard {
+  background-color: #FFB6C1;
+}
+
+#god {
+  background-color: #FDFD96;
 }
