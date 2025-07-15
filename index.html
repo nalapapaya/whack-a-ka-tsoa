@@ -20,32 +20,42 @@
           Whack-a-Ka-Tsoa!
         </h1>
       </div>
-      <div class="col-sm-12 border" id="timer">&nbsp;</div>
+      <!-- player name, game timer & score-->
+      <div class="col-sm-12 gameStatus row">
+        <div id="nameDisplay">&nbsp;</div>
+        <div id="timer">&nbsp;</div>
+        <div id="scoreDisplay">&nbsp;</div>
+      </div>
     </div>
-  <!-- have to add start game message here & replace mode with timer & score -->
     <div class="gamePlay">
-      <div class="popup gameRules" id="popup1">
-        <h2>Click on weapon or press space bar to hit!</h2>
+      <div class="popup playerName" id="popup1">
+        <h3>Enter your name:</h3>
+        <input type="text" id="playerInput"/>
         <button class="button" id="next">Next</button>
       </div>
-      <div class="popup selectDifficulty" id='popup2'>
+      <div class="popup gameRules" id="popup2">
+        <!-- game rules -->
+        <h2>Click on weapon or press space bar to hit!</h2>
+        <button class="button" id="next2">Next</button>
+      </div>
+      <div class="popup selectDifficulty" id='popup3'>
         <!-- choose mode -->
         <h3 class="col-sm-12" id="modeTitle">Choose your mode:</h3>
         <button class="button" id="easy">Easy</button>
         <button class="button" id="hard">Hard</button>
         <button class="button" id="god">God</button>
       </div>
-      <div class="popup selectWeapon" id="popup3">
+      <div class="popup selectWeapon" id="popup4">
         <!-- choose weapon -->
         <p>Select your weapon:</p>
         <button class="weapon button" id="newspaper">Newspaper</button>
         <button class="weapon button" id="slippers">Slippers</button>
       </div>
-      <div class="popup startGame" id="popup4">
+      <div class="popup startGame" id="popup5">
         <!-- start game -->
         <button class="button popupclose" id="startGame">Start Game</button>
       </div>
-      <div class="popup resultsBoard" id="popup5">
+      <div class="popup resultsBoard" id="popup6">
         <!-- results & reset -->
         <span id="resultMessage">results message</span>
         <button class="button popupclose" id="resetGame">Restart</button>
