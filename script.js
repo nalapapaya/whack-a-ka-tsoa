@@ -3,6 +3,7 @@ const totalPopups = 4; //excludes results popup
 
 /*---------------------------- Variables (state) ----------------------------*/
 let currentPopup = 1;
+let score;
 
 /*------------------------ Cached Element References ------------------------*/
 const imageWrapper = document.querySelector(".img-placeholder");
@@ -25,6 +26,12 @@ function showPopup(step) {
 function hideAllPopups() {
   popupEls.forEach((p) => (p.style.display = "none")); //hide all popups
   imageWrapper.classList.remove("blur");
+}
+//Results popup text
+function endGame() {
+  const results = document.querySelector("#resultMessage");
+  results.innerText = `You eliminated ${score} ka-tsoa(s)!`;
+  showPopup(5);
 }
 /*----------------------------- Event Listeners -----------------------------*/
 //show 1st popup on page
