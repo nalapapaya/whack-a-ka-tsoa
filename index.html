@@ -59,12 +59,23 @@
       <div class="popup resultsBoard" id="popup6">
         <!-- results & reset -->
         <span id="resultMessage">results message</span>
-        <button class="button popupclose" id="restartGame">Restart</button>
+        <button class="button popupclose restartGameBtn" id="restartGameResults">Restart</button>
+      </div>
+      <div class="popup resultsBoard" id="popup7">
+        <span id="missedMessage">Oops! Too early! Ka-tsoa is alerted!</span>
+        <button class="button popupclose restartGameBtn" id="restartGameTooEarly">Restart</button>
+      </div>
+      <div class="popup resultsBoard" id="popup8">
+        <span id="gotItMessage">You got the ka-tsoa!</span>
+        <button class="button popupclose restartGameBtn" id="restartGameGotIt">Restart</button>
       </div>
       <div class="img-placeholder col-md-6">
         <!-- easy mode -->
         <div class="easyBox"></div>
         <div class="img" id="easyRoach"></div>
+        <!-- god mode -->
+        <div class="godBox"></div>
+        <div class="img" id="godRoach"></div>
         <!-- hard mode -->
         <div class="hardBox"></div>
         <!-- <div class="hardBox2"></div>

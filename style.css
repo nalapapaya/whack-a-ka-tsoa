@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  animation-timing-function: linear;
+  animation-timing-function: linear; /* no slowmotion towards the end*/
 }
 /* cockroaches animation */
 @keyframes easyRoachAni {
@@ -11,6 +11,16 @@
   100% {
     left: 35rem;
     bottom: -18rem;
+  }
+}
+@keyframes godRoachAni {
+  0% {
+    left: 0rem;
+    bottom: 0rem;
+  }
+  100% {
+    left: 15rem;
+    bottom: -5rem;
   }
 }
 @keyframes hardRoach1Ani {
@@ -252,6 +262,23 @@ h3 {
   animation-duration: 1s;
   grid-column: 5/7;
   grid-row: 3/4;
+  position: relative;
+  z-index: 5;
+  display: none;
+}
+
+#godRoach {
+  width: 100px;
+  height: 75px;
+  object-fit: contain;
+  background-image: url("./assets/cockroach clipart.png");
+  background-size: cover;
+  animation-name: godRoachAni;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
+  /* stops animation from spawning at start */
+  grid-column: 4/5;
+  grid-row: 5/6;
   position: relative;
   z-index: 5;
   display: none;
