@@ -43,7 +43,7 @@ function hideAllPopups() {
 function endGame() {
   const results = document.querySelector("#resultMessage");
   results.innerText = `You eliminated ${score} ka-tsoa(s)!`;
-  hardTimeout.forEach(clearTimeout)
+  hardTimeout.forEach(clearTimeout);
   showPopup(6);
 }
 
@@ -56,6 +56,8 @@ function endEasyGame() {
 
 //losing condition - too early (easy mode)
 function tooEarly() {
+  clearTimeout(spawnTimeout);
+  easyRoach.style.display = "none";
   hideAllPopups();
   document.querySelector("#popup7").style.display = "block";
   imgPlaceholder.classList.add("blur");
@@ -169,7 +171,7 @@ function spawnHardRoach(cockroach, minDelay = 1000, maxDelay = 3000) {
 function restartGame() {
   clearTimeout(spawnTimeout); //clear spawn easy & god mode
   clearTimeout(countdownTimeout); //clear timer easy & god mode
-  hardTimeout.forEach(clearTimeout) //clear spawn hard mode
+  hardTimeout.forEach(clearTimeout); //clear spawn hard mode
   document.querySelector("#scoreDisplay").innerHTML = `&nbsp;`;
   document.querySelector("#timer").innerHTML = `&nbsp;`;
   document.querySelector(".easyBox").style.display = "none";
@@ -192,7 +194,7 @@ function restartGame() {
 function startOver() {
   clearTimeout(spawnTimeout); //clear spawn
   clearTimeout(countdownTimeout); //clear timer
-  hardTimeout.forEach(clearTimeout) //clear spawn hard mode
+  hardTimeout.forEach(clearTimeout); //clear spawn hard mode
   document.querySelector("#scoreDisplay").innerHTML = `&nbsp;`;
   document.querySelector("#timer").innerHTML = `&nbsp;`;
   document.querySelector("#nameDisplay").innerHTML = `&nbsp;`;
@@ -206,6 +208,7 @@ function startOver() {
   hardRoach2.style.display = "none";
   hardRoach3.style.display = "none";
   godRoach.style.display = "none";
+  selectedMode = null;
   score = 0;
   currentPopup = 1;
   showPopup(currentPopup);
