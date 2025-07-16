@@ -77,8 +77,9 @@ function startGame() {
 function spawnRoaches() {
   if (selectedMode === "hard") {
     //add random timer for spawn hard mode
-  document.querySelector("#hardRoach").style.display = "block";
-  const hardRoaches = document.querySelector("#hardRoach")
+    document.querySelector("#hardRoach").style.display = "block";
+  } else if (selectedMode === "easy") {
+    document.querySelector("#easyRoach").style.display = "block"
   }
 }
 
