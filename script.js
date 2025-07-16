@@ -260,7 +260,7 @@ next.addEventListener("click", () => {
 //player selects mode
 document.querySelector("#hard").addEventListener("click", () => {
   selectedMode = "hard";
-  timeLeft = 5; //reset timer
+  timeLeft = 60; //reset timer
 });
 
 document.querySelector("#easy").addEventListener("click", () => {

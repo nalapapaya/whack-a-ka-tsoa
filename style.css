@@ -261,7 +261,7 @@ h3 {
   width: 100px;
   height: 75px;
   object-fit: contain;
-  background-image: url("./assets/cockroach clipart.png");
+  background-image: url("./assets/nobg.png");
   background-size: cover;
   animation-name: easyRoachAni;
   animation-duration: 0.35s;
@@ -275,7 +275,7 @@ h3 {
 #hardRoach {
   width: 100px;
   height: 75px;
-  background-image: url("./assets/cockroach clipart.png");
+  background-image: url("./assets/nobg.png");
   background-size: cover;
   animation-name: hardRoach1Ani;
   animation-duration: 1s;
@@ -291,7 +291,7 @@ h3 {
 #hardRoach2 {
   width: 100px;
   height: 75px;
-  background-image: url("./assets/cockroach clipart.png");
+  background-image: url("./assets/nobg.png");
   background-size: cover;
   animation-name: hardRoach1Ani;
   animation-duration: 1s;
@@ -307,7 +307,7 @@ h3 {
 #hardRoach3 {
   width: 100px;
   height: 75px;
-  background-image: url("./assets/cockroach clipart.png");
+  background-image: url("./assets/nobg.png");
   background-size: cover;
   animation-name: hardRoach1Ani;
   animation-duration: 1s;
@@ -324,7 +324,7 @@ h3 {
   width: 100px;
   height: 75px;
   object-fit: contain;
-  background-image: url("./assets/cockroach clipart.png");
+  background-image: url("./assets/nobg.png");
   background-size: cover;
   animation-name: godRoachAni;
   animation-duration: 10s;
