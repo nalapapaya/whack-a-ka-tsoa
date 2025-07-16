@@ -161,7 +161,7 @@ function spawnHardRoach(cockroach, minDelay = 1000, maxDelay = 3000) {
       cockroach.style.display = "none";
       cockroach.style.pointerEvents = "none";
       spawnHardRoach(cockroach, minDelay, maxDelay); //allow to spawn again
-    }, 3000); //disappears in 3s
+    }, 1000); //disappears in 1s
     hardTimeout.push(timeout2);
   }, delay);
   hardTimeout.push(timeout1);

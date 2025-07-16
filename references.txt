@@ -32,3 +32,11 @@ https://www.w3schools.com/css/css3_gradients.asp
 
 image rotating reference
 https://cloudinary.com/guides/image-effects/rotating-an-image-with-css#:~:text=The%20transform%20property,-The%20trick%20to&text=The%20rotate%20function%20accepts%20an,negative%20values%20rotate%20it%20anticlockwise.
+
+tiled background:
+newspaper
+https://www.istockphoto.com/vector/newspaper-isometric-vector-icon-outline-and-filled-symbols-gm1186895340-335046184
+slippers
+https://www.freeimages.com/premium-clipart/outline-slippers-icon-on-white-background-5275674
+bug spray
+https://www.vecteezy.com/vector-art/26733266-hand-drawn-kids-drawing-cartoon-vector-illustration-bug-spray-icon-isolated-on-white-background

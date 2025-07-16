@@ -30,16 +30,20 @@
     </div>
     <div class="gamePlay">
       <div class="popup playerName" id="popup1">
-        <h3>Enter your name:</h3>
-        <input type="text" id="playerInput"/>
+        <h3 class="enterName">Enter name of Ka-tsoa Slayer:</h3>
+        <input type="text" id="playerInput" />
         <button class="button" id="next">Next</button>
       </div>
       <div class="popup gameRules" id="popup2">
         <!-- game rules -->
-        <h2>Hover weapon over target and click to hit!</h2>
+        <h2><strong>Cockroach Crisis!</strong></h2>
+        <p>Hover weapon over target and click to eliminate <em>ka-tsoa!</em></p>
+        <video id="manualVideo" width="250" height="220" autoplay muted>
+          <source src="assets/manual.mov" />
+        </video>
         <button class="button" id="next2">Next</button>
       </div>
-      <div class="popup selectDifficulty" id='popup3'>
+      <div class="popup selectDifficulty" id="popup3">
         <!-- choose mode -->
         <h3 class="col-sm-12" id="modeTitle">Choose your mode:</h3>
         <button class="button" id="easy">Easy</button>
@@ -48,7 +52,7 @@
       </div>
       <div class="popup selectWeapon" id="popup4">
         <!-- choose weapon -->
-        <p>Select your weapon:</p>
+        <p id="weaponTitle">Select your weapon:</p>
         <button class="weapon button" id="newspaper">Newspaper</button>
         <button class="weapon button" id="slippers">Slippers</button>
       </div>
@@ -59,15 +63,27 @@
       <div class="popup resultsBoard" id="popup6">
         <!-- results & reset -->
         <span id="resultMessage">results message</span>
-        <button class="button popupclose restartGameBtn" id="restartGameResults">Restart</button>
+        <button
+          class="button popupclose restartGameBtn"
+          id="restartGameResults"
+        >
+          Restart
+        </button>
       </div>
       <div class="popup resultsBoard" id="popup7">
         <span id="missedMessage">Oops! Too early! Ka-tsoa is alerted!</span>
-        <button class="button popupclose restartGameBtn" id="restartGameTooEarly">Restart</button>
+        <button
+          class="button popupclose restartGameBtn"
+          id="restartGameTooEarly"
+        >
+          Restart
+        </button>
       </div>
       <div class="popup resultsBoard" id="popup8">
         <span id="gotItMessage">You got the ka-tsoa!</span>
-        <button class="button popupclose restartGameBtn" id="restartGameGotIt">Restart</button>
+        <button class="button popupclose restartGameBtn" id="restartGameGotIt">
+          Restart
+        </button>
       </div>
       <div class="img-placeholder col-md-6">
         <!-- easy mode -->
