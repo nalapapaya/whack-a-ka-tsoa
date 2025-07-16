@@ -6,6 +6,7 @@ let currentPopup = 1;
 let score = 0;
 let timeLeft;
 let selectedMode = null;
+let totalHardRoach = 100;
 
 /*------------------------ Cached Element References ------------------------*/
 const imageWrapper = document.querySelector(".img-placeholder");
@@ -69,8 +70,22 @@ function startGame() {
     document.querySelector("#timer").innerText = "Timer: \u221E";
     document.querySelector(".easyBox").style.display = "block";
   }
+  spawnRoaches()
+}
 
-  //spawnRoaches()
+//spawn roaches - hard mode
+function spawnRoaches() {
+  if (selectedMode === "hard") {
+    //add random timer for spawn hard mode
+  document.querySelector("#hardRoach").style.display = "block";
+  const hardRoaches = document.querySelector("#hardRoach")
+  }
+}
+
+//on hit disappear
+function onHit() {
+  document.querySelector("#hardRoach").style.display = "none";
+  score++;
 }
 
 //restart game - choose from mode
@@ -174,3 +189,6 @@ document.querySelector("#restartGame").addEventListener("click", restartGame);
 
 //reset game
 document.querySelector("#resetGame").addEventListener("click", startOver);
+
+//on hit
+document.querySelectorAll("#hardRoach").addEventListener('click', onHit);
