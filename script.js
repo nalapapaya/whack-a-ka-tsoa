@@ -64,6 +64,7 @@ function tooEarly() {
   easyRoach.style.display = "none";
   hideAllPopups();
   document.querySelector("#popup7").style.display = "block";
+  document.querySelector("#missedMessage").innerHTML = "Oops! Too early! <br /><em>Ka-tsoa</em> colony is alerted!";
   imgPlaceholder.classList.add("blur");
 }
 
