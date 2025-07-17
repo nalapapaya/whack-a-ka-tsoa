@@ -11,16 +11,19 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Delius&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
       <div class="row">
         <h1 class="col-sm-12" id="gameTitle">
           <div class="img" id="logo"></div>
-          Whack-a-Ka-Tsoa!
+          Whack-a-<em>Ka-Tsoa!</em>
         </h1>
       </div>
       <!-- player name, game timer & score-->
@@ -68,7 +71,7 @@
       </div>
       <div class="popup resultsBoard" id="popup6">
         <!-- results & reset -->
-        <span id="resultMessage">results message</span>
+        <p id="resultMessage">results message</p>
         <button
           class="button popupclose restartGameBtn"
           id="restartGameResults"
@@ -77,9 +80,9 @@
         </button>
       </div>
       <div class="popup resultsBoard" id="popup7">
-        <span id="missedMessage"
-          >Oops! Too early! Ka-tsoa colony is alerted!</span
-        >
+        <p id="missedMessage">
+          Oops! Too early! <br /><em>Ka-tsoa</em> colony is alerted!
+        </p>
         <button
           class="button popupclose restartGameBtn"
           id="restartGameTooEarly"
@@ -88,7 +91,7 @@
         </button>
       </div>
       <div class="popup resultsBoard" id="popup8">
-        <span id="gotItMessage">You got the ka-tsoa!</span>
+        <p id="gotItMessage">YES! <br>You got the <em>ka-tsoa!</em></p>
         <button class="button popupclose restartGameBtn" id="restartGameGotIt">
           Restart
         </button>

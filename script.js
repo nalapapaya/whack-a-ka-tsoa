@@ -46,7 +46,7 @@ function hideAllPopups() {
 //Results popup text
 function endGame() {
   const results = document.querySelector("#resultMessage");
-  results.innerText = `You eliminated ${score} ka-tsoa(s)!`;
+  results.innerText = `YAY! You eliminated ${score} ka-tsoa(s)!`;
   hardTimeout.forEach(clearTimeout);
   showPopup(6);
 }
@@ -270,7 +270,7 @@ next.addEventListener("click", () => {
 //player selects mode
 document.querySelector("#hard").addEventListener("click", () => {
   selectedMode = "hard";
-  timeLeft = 60; //reset timer
+  timeLeft = 30; //reset timer
 });
 
 document.querySelector("#easy").addEventListener("click", () => {
@@ -328,7 +328,7 @@ imgPlaceholder.addEventListener("click", (event) => {
 easyRoach.addEventListener("click", () => {
   easyRoach.style.pointerEvents = "none";
   easyRoach.style.display = "none";
-  score++;
+  score += 1000;
   updateScore();
   endEasyGame();
 });
@@ -337,7 +337,7 @@ easyRoach.addEventListener("click", () => {
 godRoach.addEventListener("click", () => {
   godRoach.style.pointerEvents = "none";
   godRoach.style.display = "none";
-  score++;
+  score += 9999;
   updateScore();
   endEasyGame();
 });

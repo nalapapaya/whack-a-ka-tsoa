@@ -138,7 +138,8 @@ h3 {
 .popup {
   position: fixed;
   z-index: 99;
-  background-color: rgba(131, 150, 194, 0.9);
+  /* background-color: rgba(131, 150, 194, 0.9); */
+  background-color: rgba(160, 175, 210, 0.9);
   display: none;
   width: 20rem;
   height: 25rem;
@@ -276,7 +277,6 @@ h3 {
   display: none;
   z-index: 1;
 }
-
 #easyRoach {
   width: 100px;
   height: 75px;
@@ -429,7 +429,7 @@ h3 {
 }
 
 #scoreDisplay {
-  grid-column: 7/8;
+  grid-column: 7/9;
   font-size: 18px;
 }
 
@@ -492,13 +492,28 @@ h3 {
   flex-direction: column;
 }
 
-#popup7 {
+#popup8 {
   width: 25rem;
-  height: 15rem;
-  padding-top: 20px;
+  height: 13rem;
+  padding-top: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  left: 38%;
+  top: 35%;
+}
+
+#popup7 {
+  font-size: 25px;
+  padding-bottom: 0;
+  width: 25rem;
+  height: 15rem;
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 38%;
+  top: 35%;
 }
 
 #missedMessage {
@@ -534,4 +549,28 @@ h3 {
   display: none;
   z-index: 9999;
   transform: translate(-50%,-50%);
+}
+
+#gotItMessage {
+  font-size: 25px;
+  padding: 20px;
+}
+
+#restartGameTooEarly {
+  font-size: 20px;
+}
+
+#popup6 {
+  width: 25rem;
+  height: 10rem;
+  padding-top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 38%;
+  top: 40%;
+}
+#resultMessage {
+  font-size: 25px;
+  padding-top:25px;
 }
