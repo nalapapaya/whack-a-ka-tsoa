@@ -30,7 +30,7 @@
     </div>
     <div class="gamePlay">
       <div class="popup playerName" id="popup1">
-        <h3 class="enterName">Enter name of Ka-tsoa Slayer:</h3>
+        <h3 class="enterName">Enter name of <em>Ka-tsoa</em> Slayer:</h3>
         <input type="text" id="playerInput" />
         <button class="button" id="next">Next</button>
       </div>
@@ -46,9 +46,11 @@
       <div class="popup selectDifficulty" id="popup3">
         <!-- choose mode -->
         <h3 class="col-sm-12" id="modeTitle">Choose your mode:</h3>
-        <button class="button" id="easy">Easy</button>
-        <button class="button" id="hard">Hard</button>
-        <button class="button" id="god">God</button>
+        <div id="difficultyMode">
+          <button class="button" id="easy">React</button>
+          <button class="button" id="hard">Rhythm</button>
+          <button class="button" id="god">Tutorial</button>
+        </div>
       </div>
       <div class="popup selectWeapon" id="popup4">
         <!-- choose weapon -->
@@ -58,6 +60,7 @@
       </div>
       <div class="popup startGame" id="popup5">
         <!-- start game -->
+        <p id="startMsg">May the odds be in your favour, warrior.</p>
         <button class="button popupclose" id="startGame">Start Game</button>
       </div>
       <div class="popup resultsBoard" id="popup6">
@@ -71,7 +74,9 @@
         </button>
       </div>
       <div class="popup resultsBoard" id="popup7">
-        <span id="missedMessage">Oops! Too early! Ka-tsoa is alerted!</span>
+        <span id="missedMessage"
+          >Oops! Too early! Ka-tsoa colony is alerted!</span
+        >
         <button
           class="button popupclose restartGameBtn"
           id="restartGameTooEarly"
@@ -86,6 +91,7 @@
         </button>
       </div>
       <div class="img-placeholder col-md-6">
+        <img id="giantNewspaper" src="assets/newspaper-cursor.png" />
         <!-- easy mode -->
         <div class="easyBox"></div>
         <div class="img" id="easyRoach"></div>

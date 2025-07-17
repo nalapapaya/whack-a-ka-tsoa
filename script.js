@@ -23,6 +23,8 @@ const imgPlaceholder = document.querySelector(".img-placeholder");
 const hardRoach1 = document.querySelector("#hardRoach");
 const hardRoach2 = document.querySelector("#hardRoach2");
 const hardRoach3 = document.querySelector("#hardRoach3");
+const giantNewspaper = document.querySelector("#giantNewspaper");
+const newspaperBtn = document.querySelector("#newspaper");
 /*-------------------------------- Functions --------------------------------*/
 //Showing popups by steps
 function showPopup(step) {
@@ -184,6 +186,8 @@ function restartGame() {
   hardRoach2.style.display = "none";
   hardRoach3.style.display = "none";
   godRoach.style.display = "none";
+  giantNewspaper.style.display = "none";
+  imageWrapper.style.cursor = "auto";
   selectedMode = null;
   score = 0;
   currentPopup = 3;
@@ -208,6 +212,8 @@ function startOver() {
   hardRoach2.style.display = "none";
   hardRoach3.style.display = "none";
   godRoach.style.display = "none";
+  giantNewspaper.style.display = "none";
+  imageWrapper.style.cursor = "auto";
   selectedMode = null;
   score = 0;
   currentPopup = 1;
@@ -341,4 +347,19 @@ allHardRoaches.forEach((cockroach) => {
     score++;
     updateScore();
   });
+});
+
+//newspaper weapon selected
+newspaperBtn.addEventListener("click", () => {
+  giantNewspaper.style.display = "block"; //show newspaper cursor
+  imageWrapper.style.cursor = "none"; //hide default cursor
+});
+
+//moving weapon cursor with mouse
+document.addEventListener("mousemove", (event) => {
+  const rect = imgPlaceholder.getBoundingClientRect(); //getting position on game area
+  const x = event.clientX - rect.left; //get mouse X position
+  const y = event.clientY - rect.top; //get mouse Y position
+  giantNewspaper.style.left = `${x}px`; //follow mouse axis X
+  giantNewspaper.style.top = `${y}px`; //follow mouse axis Y
 });

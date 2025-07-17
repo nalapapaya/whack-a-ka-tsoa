@@ -30,17 +30,17 @@
   }
   100% {
     left: 0rem;
-    top: 26rem;
-    display: none;
+    top: 24rem;
   }
 }
+@keyframes hardRoach2Ani {
   0% {
     left: 52.5rem;
     top: 16rem;
   }
   100% {
     left: 52.5rem;
-    top: 40rem;
+    top: 24rem;
   }
 }
 
@@ -51,15 +51,21 @@
   }
   100% {
     left: 65rem;
-    top: 40rem;
+    top: 24rem;
   }
-} */
+}
 
 body {
   margin: 0;
-  background-image: url("./assets/whack-a-ka-tsoa\ background.png");
-  background-position: contain;
+  background-image: url("./assets/whack-a-ka-tsoa-background.png");
   background-size: cover;
+  background-position: center;
+  font-family: ;
+}
+h1 {
+  font-size: 70px;
+  padding: 0;
+  background-color: white;
 }
 
 h2 {
@@ -94,6 +100,7 @@ h3 {
   height: 60px;
   width: 60rem;
   margin: 10px;
+  margin-top: 0;
   place-items: center;
   background-color: rgba(111, 111, 111, 0.85);
   border-radius: 8px;
@@ -116,6 +123,7 @@ h3 {
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 1fr);
   gap: 0px;
+  overflow: hidden; /*prevents mouse going out of holder*/
 }
 
 .gamePlay {
@@ -130,7 +138,7 @@ h3 {
 .popup {
   position: fixed;
   z-index: 99;
-  background-color: rgba(117, 155, 244, 0.9);
+  background-color: rgba(131, 150, 194, 0.9);
   display: none;
   width: 20rem;
   height: 25rem;
@@ -146,7 +154,7 @@ h3 {
   width: 35rem;
   height: 20rem;
   left: 32%;
-  padding: 10px
+  padding: 10px;
 }
 
 .playerName {
@@ -154,16 +162,38 @@ h3 {
   height: 10rem;
   left: 35%;
   top: 40%;
-  padding: 30px;
+  padding: 25px;
 }
 
 .enterName {
   font-size: 23px;
+  padding: 5px;
 }
 
 .gameRules {
   padding: 10px;
   height: 26rem;
+}
+
+.selectDifficulty {
+  width: 46rem;
+  height: 16rem;
+  left: 25%;
+  top: 32%;
+  padding: 0;
+}
+
+.selectDifficulty button {
+  margin: 10px;
+  margin-top: 20px;
+}
+
+.startGame {
+  height: 10rem;
+  width: 25rem;
+  left: 38%;
+  top: 40%;
+  padding-top: 28px;
 }
 
 .easyBox {
@@ -328,35 +358,64 @@ h3 {
 }
 
 #modeTitle {
-  display: flex;
-  justify-content: center;
-  margin: 2px;
-}
-
-#selectDifficulty {
-  gap: 2rem;
-  font-size: 15px;
+  margin: 0;
+  margin-top: 10px;
+  font-size: 30px;
 }
 
 #logo {
-  background-image: url("./assets/baby cockroach.png");
+  background-image: url("./assets/logo.png");
   width: 4rem;
-  height: 4rem;
-  background-size: cover;
+  height: 3.8rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
   display: inline-block;
   vertical-align: middle;
+  /* background-image: url("./assets/banner.png");
+  height: 6.5rem;
+  width: 50rem;
+  background-size: cover;
+  background-position: center; */
 }
 
 #easy {
-  background-color: #add8e6;
+  background-image: url("./assets/easymode.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 13rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 35px;
+  border-color: white;
 }
 
 #hard {
-  background-color: #ffb6c1;
+  background-image: url("./assets/hardmode.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 13rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 35px;
+  border-color: white;
 }
 
 #god {
-  background-color: #fdfd96;
+  background-image: url("./assets/easymode.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 13rem;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 35px;
+  border-color: white;
 }
 
 #nameDisplay {
@@ -380,12 +439,14 @@ h3 {
   height: 30px;
   width: 7rem;
   padding: 0px;
-  background-color: #add8e6;
+  background-color: rgb(180, 200, 206);
   color: rgb(28, 36, 100);
   cursor: pointer;
   box-shadow: 0 8px #999;
   border-radius: 10px;
   border-color: white;
+  margin-right: 5px;
+  margin-bottom: 2px;
 }
 
 #newspaper {
@@ -422,4 +483,46 @@ h3 {
   outline: none;
   padding: 0;
   margin: 0;
+}
+
+#popup3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#popup7 {
+  width: 25rem;
+  height: 15rem;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#missedMessage {
+  padding: 20px;
+  margin: 20px;
+}
+
+#difficultyMode {
+  display: flex;
+  justify-content: center;
+}
+
+#gameTitle {
+  display: flex;
+  align-items: baseline;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+#giantNewspaper {
+position: absolute;
+  width: 150px;
+  pointer-events: none; /* doesnt block clicks */
+  display: none;
+  z-index: 9999;
+  transform: translate(-50%,-50%);
 }
