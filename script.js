@@ -25,6 +25,8 @@ const hardRoach2 = document.querySelector("#hardRoach2");
 const hardRoach3 = document.querySelector("#hardRoach3");
 const giantNewspaper = document.querySelector("#giantNewspaper");
 const newspaperBtn = document.querySelector("#newspaper");
+const giantSlippers = document.querySelector("#giantSlippers");
+const slippersBtn = document.querySelector("#slippers");
 /*-------------------------------- Functions --------------------------------*/
 //Showing popups by steps
 function showPopup(step) {
@@ -187,6 +189,7 @@ function restartGame() {
   hardRoach3.style.display = "none";
   godRoach.style.display = "none";
   giantNewspaper.style.display = "none";
+  giantSlippers.style.display = "none";
   imageWrapper.style.cursor = "auto";
   selectedMode = null;
   score = 0;
@@ -213,6 +216,7 @@ function startOver() {
   hardRoach3.style.display = "none";
   godRoach.style.display = "none";
   giantNewspaper.style.display = "none";
+  giantSlippers.style.display = "none";
   imageWrapper.style.cursor = "auto";
   selectedMode = null;
   score = 0;
@@ -352,6 +356,14 @@ allHardRoaches.forEach((cockroach) => {
 //newspaper weapon selected
 newspaperBtn.addEventListener("click", () => {
   giantNewspaper.style.display = "block"; //show newspaper cursor
+  giantSlippers.style.display = "none"; //hide slippers if visible
+  imageWrapper.style.cursor = "none"; //hide default cursor
+});
+
+//slippers weapon selected
+slippersBtn.addEventListener("click", () => {
+  giantSlippers.style.display = "block"; //show slippers cursor
+  giantNewspaper.style.display = "none" //hide newspaper if visible
   imageWrapper.style.cursor = "none"; //hide default cursor
 });
 
@@ -362,4 +374,6 @@ document.addEventListener("mousemove", (event) => {
   const y = event.clientY - rect.top; //get mouse Y position
   giantNewspaper.style.left = `${x}px`; //follow mouse axis X
   giantNewspaper.style.top = `${y}px`; //follow mouse axis Y
+  giantSlippers.style.left = `${x}px`;
+  giantSlippers.style.top = `${y}px`;
 });

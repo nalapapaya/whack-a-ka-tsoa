@@ -60,7 +60,7 @@ body {
   background-image: url("./assets/whack-a-ka-tsoa-background.png");
   background-size: cover;
   background-position: center;
-  font-family: ;
+  font-family: 'Cutie Pootie', cursive;
 }
 h1 {
   font-size: 70px;
@@ -462,7 +462,7 @@ h3 {
 }
 
 #slippers {
-  background-image: url(./assets/flipflops.jpg);
+  background-image: url(./assets/flipflops.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-color: white;
@@ -519,9 +519,18 @@ h3 {
 }
 
 #giantNewspaper {
-position: absolute;
+  position: absolute;
   width: 150px;
   pointer-events: none; /* doesnt block clicks */
+  display: none;
+  z-index: 9999;
+  transform: translate(-50%,-50%); /*center of cursor*/
+}
+
+#giantSlippers {
+  position: absolute;
+  width: 150px;
+  pointer-events: none;
   display: none;
   z-index: 9999;
   transform: translate(-50%,-50%);
