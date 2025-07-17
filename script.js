@@ -283,15 +283,6 @@ document.querySelector("#god").addEventListener("click", () => {
   timeLeft = Infinity; //no timer
 });
 
-//start timer for hard mode
-// document.querySelector("#startGame").addEventListener("click", () => {
-//   if (selectedMode === "hard") {
-//     countdown();
-//   } else {
-//     document.querySelector("#timer").innerText = "Timer: ∞";
-//   }
-// });
-
 //start game
 document.querySelector("#startGame").addEventListener("click", startGame);
 

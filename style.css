@@ -138,7 +138,6 @@ h3 {
 .popup {
   position: fixed;
   z-index: 99;
-  /* background-color: rgba(131, 150, 194, 0.9); */
   background-color: rgba(160, 175, 210, 0.9);
   display: none;
   width: 20rem;
@@ -372,11 +371,6 @@ h3 {
   background-position: bottom;
   display: inline-block;
   vertical-align: middle;
-  /* background-image: url("./assets/banner.png");
-  height: 6.5rem;
-  width: 50rem;
-  background-size: cover;
-  background-position: center; */
 }
 
 #easy {
