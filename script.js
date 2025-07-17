@@ -224,8 +224,6 @@ function startOver() {
   currentPopup = 1;
   showPopup(currentPopup);
   document.querySelector("#playerInput").value = ""; // to clear fill
-  console.log("Start spawntimer", spawnTimeout);
-  console.log("Clear spawntimer", spawnTimeout);
 }
 
 /*----------------------------- Event Listeners -----------------------------*/
@@ -241,10 +239,6 @@ allButtons.forEach((button) => {
       currentPopup++;
       showPopup(currentPopup);
     }
-    // else if (currentPopup === totalPopups) {
-    //   showPopup(currentPopup);
-    // }
-    console.log("current popup:", currentPopup);
   });
 });
 
