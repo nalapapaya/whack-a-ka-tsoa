@@ -3,6 +3,7 @@
 A cute but chaotic browser-based game where you smash *ka-tsoas* (cockroaches) with either a newspaper or slippers (Singaporean's favourite weapons)!  
 Choose your weapon, select your game mode, and see how many pests you can eliminate before time runs out (or before one gets you first 😱)!  
  Unleash your anger and take revenge on the *ka-tsoas*!
+ ![Game platform overview](./assets/game-overview.png)
 
 ## 🎮 Game Modes
 
@@ -17,6 +18,7 @@ Choose your weapon, select your game mode, and see how many pests you can elimin
 - 👞 Choose your weapon: **Newspaper** or **Slippers**  
 ![Weapon Selection: Newspaper or Slippers](./assets/weapon-selection.png)
 - ⏱️ Timer-based scoring in Hard mode
+![Timer left 30 seconds on hard mode](./assets/timer.png)
 - 😵 Funny win/lose scenarios and popups
 - 🧠 Memorize the *ka-tsoa* paths and act fast!
 - 💅 Custom fonts, animations, and styling
@@ -24,10 +26,14 @@ Choose your weapon, select your game mode, and see how many pests you can elimin
 
 ## 🕹️ Controls
 
-- **Mouse Click:** Whack the *ka-tsoas*
-- **Mouse Movement:** Weapon follows cursor (aim via center of weapon only)
-- **Restart Button:** Replay from difficulty selection
-- **Start over Button:** Reselect from player name input
+- **Mouse Click:** Whack the *ka-tsoas*  
+![Mouse over target to hit](./assets/hit.png)
+- **Mouse Movement:** Weapon follows cursor (aim via center of weapon only)  
+![Weapon over target with cursor view in center of weapon](./assets/mouse-over-target.png)
+- **Restart Button:** Replay from difficulty selection  
+![Restart button on popup after game ends](./assets/restart-button.png)
+- **Start over Button:** Reselect from player name input  
+![Start over button on top of game platform](./assets/startover-button.png)
 
 ## 🖼️ Tech Stack
 
