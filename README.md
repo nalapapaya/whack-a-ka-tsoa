@@ -17,8 +17,8 @@ Choose your weapon, select your game mode, and see how many pests you can elimin
 
 - 👞 Choose your weapon: **Newspaper** or **Slippers**  
 ![Weapon Selection: Newspaper or Slippers](./assets/weapon-selection.png)
-- ⏱️ Timer-based scoring in Hard mode
-![Timer left 30 seconds on hard mode](./assets/timer.png)
+- ⏱️ Timer-based scoring in Rhythm mode
+![Timer left 30 seconds on Rhythm mode](./assets/timer.png)
 - 😵 Funny win/lose scenarios and popups
 - 🧠 Memorize the *ka-tsoa* paths and act fast!
 - 💅 Custom fonts, animations, and styling
